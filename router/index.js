@@ -1,51 +1,33 @@
 const routers = [
   {
-    title: '快速提现',
+    title: '加油卡充值',
     children: [
       {
-        title: '概要统计',
-        path: '/withdraws/summary',
+        title: '在线充值',
+        path: '/refuelling-cards/recharge',
         icon: 'el-icon-s-help',
         children: []
       },
       {
-        title: '提现列表',
-        path: '/list',
-        icon: 'el-icon-s-help',
-        children: []
-      },
-      {
-        title: '提现汇总',
-        path: '/summary/daily',
+        title: '充值订单',
+        path: '/refuelling-cards/list',
         icon: 'el-icon-s-help',
         children: []
       }
     ]
   },
   {
-    title: '快速提现',
+    title: '手机话费充值',
     children: [
       {
-        title: '支付宝设置',
+        title: '在线充值',
         path: '/alipay',
         icon: 'el-icon-s-help',
         children: []
       },
       {
-        title: '微信设置',
+        title: '充值订单',
         path: '/wechatpay',
-        icon: 'el-icon-s-help',
-        children: []
-      },
-      {
-        title: '银行卡设置',
-        path: '/bankCardPay',
-        icon: 'el-icon-s-help',
-        children: []
-      },
-      {
-        title: '参数设置',
-        path: '/setting',
         icon: 'el-icon-s-help',
         children: []
       }
