@@ -10,7 +10,7 @@ export default {
   },
   head() {
     return {
-      title: '概要统计 - EasyAPI快速提现',
+      title: '加油卡充值 - EasyAPI充值中心',
       meta: [
         { hid: 'description', name: 'description', content: '每日统计' },
         { hid: 'keyword', name: 'keyword', content: '每日统计' }
