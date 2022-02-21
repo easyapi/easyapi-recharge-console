@@ -1,33 +1,27 @@
 import './index.scss'
-import Header from '../../components/Header'
-import Aside from '../../components/Aside'
+import Header from '../../../components/Header'
+import Aside from '../../../components/Aside'
 
 export default {
-  name: 'index',
+  name: '',
   components: {
     Header,
-    Aside,
+    Aside
   },
   head() {
     return {
-      title: '支付宝设置 - EasyAPI快速提现',
+      title: '加油卡充值订单 - EasyAPI充值中心',
+      meta: [
+        { hid: 'description', name: 'description', content: '每日统计' },
+        { hid: 'keyword', name: 'keyword', content: '每日统计' }
+      ]
     }
   },
   data() {
     return {
       showHeader: '',
       showSidebar: '',
-      form: {
-        alipay: true,
-        radio: 'automaticWithdrawal',
-        alipayVersion: '',
-        withoutCode: '',
-      },
-      alipayVersionArr: [{ value: 'mapi', label: 'mapi' }],
-      withoutCodeArr: [
-        { value: '1', label: '是' },
-        { value: '0', label: '否' },
-      ],
+      tableData: []
     }
   },
   methods: {},
@@ -42,5 +36,5 @@ export default {
     } else {
       this.showSidebar = false
     }
-  },
+  }
 }

@@ -1,0 +1,37 @@
+.el-radio__inner {
+  display: none;
+}
+
+.recharge-company {
+  .el-radio.is-bordered {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    padding: 12px 0 0 0;
+  }
+}
+
+.pick-img {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: 0;
+}
+
+.active {
+  display: block;
+}
+
+.recharge-input {
+  width: 250px;
+}
+
+.discounts {
+  color: red;
+  font-size: 24px;
+}
+
+.original {
+  font-size: 18px;
+  text-decoration: line-through;
+}

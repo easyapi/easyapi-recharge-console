@@ -21,13 +21,13 @@ const routers = [
     children: [
       {
         title: '在线充值',
-        path: '/alipay',
+        path: '/mobile/recharge',
         icon: 'el-icon-s-help',
         children: []
       },
       {
         title: '充值订单',
-        path: '/wechatpay',
+        path: '/mobile/list',
         icon: 'el-icon-s-help',
         children: []
       }
