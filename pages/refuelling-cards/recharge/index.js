@@ -1,6 +1,7 @@
 import './index.scss'
 import Header from '../../../components/Header'
 import Aside from '../../../components/Aside'
+import { getProductList } from '../../../api/gasaline-order'
 
 export default {
   name: '',
@@ -27,12 +28,21 @@ export default {
       form: {
         company: 1,
         card: '',
-        price: 200
-      }
+        price: ''
+      },
+      productList: []
     }
   },
-  methods: {},
+  methods: {
+    getProductList() {
+      let params = {}
+      getProductList(params, this).then(res => {
+        this.productList = res.data.content
+      })
+    }
+  },
   mounted() {
+    this.getProductList()
     if (this.$store.state.settings.showHeader == 'true') {
       this.showHeader = true
     } else {

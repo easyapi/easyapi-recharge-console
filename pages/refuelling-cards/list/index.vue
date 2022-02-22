@@ -14,35 +14,47 @@
             <el-table
               :data="tableData"
               style="width: 100%">
+              <template slot="empty">
+                <p>{{tableText}}</p>
+              </template>
               <el-table-column
-                prop="date"
+                prop="no"
                 label="订单号">
               </el-table-column>
               <el-table-column
-                prop="name"
+                prop="addTime"
                 label="时间">
               </el-table-column>
               <el-table-column
-                prop="address"
+                prop="type"
                 label="卡类型">
               </el-table-column>
               <el-table-column
-                prop="address"
+                prop="account"
                 label="加油卡号">
               </el-table-column>
               <el-table-column
-                prop="address"
+                prop="price"
                 label="价格">
               </el-table-column>
               <el-table-column
-                prop="address"
+                prop="facePrice"
                 label="面值">
               </el-table-column>
               <el-table-column
-                prop="address"
+                prop="state"
                 label="状态">
               </el-table-column>
             </el-table>
+            <pagination
+              @fatherSize="fatherSize"
+              @fatherCurrent="fatherCurrent"
+              :size="pagination.size"
+              :total-elements="pagination.total"
+              class="paging"
+            >
+            </pagination>
+            <div style="clear: both"></div>
           </div>
         </div>
       </div>

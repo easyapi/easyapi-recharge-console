@@ -3,7 +3,7 @@ import { Message } from 'element-ui'
 
 export default function({ $axios, redirect }) {
   $axios.onRequest((config) => {
-    let token = Cookies.get('fpAuthToken')
+    let token = Cookies.get('authenticationToken')
     if (token) {
       config.headers.Authorization = 'Bearer ' + token
     }

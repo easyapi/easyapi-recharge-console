@@ -1,12 +1,15 @@
 import './index.scss'
 import Header from '../../../components/Header'
 import Aside from '../../../components/Aside'
+import { getMobileList } from '../../../api/mobile'
+import pagination from '../../../components/Pagination'
 
 export default {
   name: '',
   components: {
     Header,
-    Aside
+    Aside,
+    pagination
   },
   head() {
     return {
@@ -21,11 +24,42 @@ export default {
     return {
       showHeader: '',
       showSidebar: '',
-      tableData: []
+      tableData: [],
+      tableText: '',
+      pagination: {
+        pageSize: 10,
+        total: null,
+        page: 1
+      }
     }
   },
-  methods: {},
+  methods: {
+    getMobileList() {
+      let params = {
+        page: this.pagination.page - 1,
+        size: this.pagination.pageSize
+      }
+      getMobileList(params, this).then(res => {
+        if (res.data.code === 1) {
+          this.pagination.total = res.data.totalElements
+          this.tableData = res.data.content
+        } else {
+          this.pagination.total = 0
+          this.tableData = []
+        }
+      })
+    },
+    fatherSize(data) {
+      this.pagination.pageSize = data
+      this.getMobileList()
+    },
+    fatherCurrent(data) {
+      this.pagination.page = data
+      this.getMobileList()
+    }
+  },
   mounted() {
+    this.getMobileList()
     if (this.$store.state.settings.showHeader == 'true') {
       this.showHeader = true
     } else {

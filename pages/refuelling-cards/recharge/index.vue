@@ -31,13 +31,7 @@
               </el-form-item>
               <el-form-item label="充值金额">
                 <el-radio-group v-model="form.price">
-                  <el-radio :label="200" border>
-                  </el-radio>
-                  <el-radio :label="300" border>
-                  </el-radio>
-                  <el-radio :label="500" border>
-                  </el-radio>
-                  <el-radio :label="1000" border>
+                  <el-radio v-for="item in productList" :label="item.facePrice" border>
                   </el-radio>
                 </el-radio-group>
               </el-form-item>

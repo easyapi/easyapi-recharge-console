@@ -2,6 +2,16 @@
   display: none;
 }
 
+.el-form-item__content {
+  width: 450px;
+}
+
+.el-radio.is-bordered + .el-radio.is-bordered {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+
 .recharge-company {
   .el-radio.is-bordered {
     height: 90px;
@@ -9,6 +19,8 @@
     position: relative;
     padding: 12px 0 0 0;
   }
+
+
 }
 
 .pick-img {
